@@ -1,1 +1,1 @@
-import 'portfolio.scss';
+import './portfolio.scss';

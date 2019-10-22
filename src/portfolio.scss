@@ -1,0 +1,12 @@
+@import "~normalize.css";
+@import "assets/fonts/fonts.css";
+
+/*helpers*/
+@import "scss/helpers/variables";
+
+/*components*/
+@import "scss/components/avatar/avatar";
+
+/*modules*/
+@import "scss/modules/page/page";
+@import "scss/modules/header/header";

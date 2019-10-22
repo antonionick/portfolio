@@ -1,0 +1,9 @@
+*  {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.page {
+  max-width: $max-width;
+  margin: 0 auto;
+}
