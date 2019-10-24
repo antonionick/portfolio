@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Portfolio</title>
-	<link rel="shortcut icon" href="static/favicon.ico">
+	<!--<link rel="shortcut icon" href="static/favicon.ico">-->
 </head>
 <body>
 <!--header-->
@@ -50,7 +50,7 @@
 	<!--info-->
 	<div class="info">
 		<div class="page info__wrapper">
-			<section class="panel info__content">
+			<div class="panel panel_open info__content">
 				<div class="panel__title-wrapper">
 					<!--info title-->
 					<h2 class="panel__title">Education</h2>
@@ -74,9 +74,91 @@
 						<h3 class="panel__item-title">University BSUIR</h3>
 						<span class="panel__item-info">2018 - 2022</span>
 					</li>
-					<!--item-->
 				</ul>
-			</section>
+			</div>
+		</div>
+	</div>
+
+	<!--projects-->
+	<div class="projects">
+		<div class="page projects__wrapper">
+			<!--carousel-->
+			<div class="carousel projects__carousel">
+				<!--wrapper-->
+				<div class="carousel__wrapper">
+
+					<!--content-->
+					<section class="carousel__content">
+						<!--title-->
+						<h2 class="carousel__title">theyalow</h2>
+						<!--description-->
+						<div class="panel carousel__description carousel__description_open">
+							<div class="panel__title-wrapper carousel__show-wrapper">
+								<!--info title-->
+								<h2 class="panel__title carousel__show">show description</h2>
+								<!--info icon-->
+								<span class="panel__icon">&gt;</span>
+							</div>
+							<!--list-->
+							<ul class="panel__list carousel__list">
+								<!--item-->
+								<li class="panel__item carousel__list-item">Responsive (support 5 resolutions)</li>
+								<!--item-->
+								<li class="panel__item carousel__list-item">Svg</li>
+								<!--item-->
+								<li class="panel__item carousel__list-item">Interactive blocks</li>
+								<!--item-->
+								<li class="panel__item carousel__list-item">Use BEM</li>
+							</ul>
+						</div>
+						<!--help-->
+						<span class="carousel__help">Tap on image to see the project
+							<span class="carousel__help-arrow">&gt;</span>
+						</span>
+						<!--link-->
+						<a class="carousel__wrapper-img" href="../projects/theyalow/theyalow.html" target="_blank">
+							<img class="carousel__img" src="assets/img/theylow.PNG" alt="project">
+						</a>
+					</section>
+
+					<!--content-->
+					<section class="carousel__content">
+						<!--title-->
+						<h2 class="carousel__title">Repair design project</h2>
+						<!--description-->
+						<div class="panel carousel__description carousel__description_open">
+							<div class="panel__title-wrapper carousel__show-wrapper">
+								<!--info title-->
+								<h2 class="panel__title carousel__show">show description</h2>
+								<!--info icon-->
+								<span class="panel__icon">&gt;</span>
+							</div>
+							<!--list-->
+							<ul class="panel__list carousel__list">
+								<!--item-->
+								<li class="panel__item carousel__list-item">Responsive (support 5 resolutions)</li>
+								<!--item-->
+								<li class="panel__item carousel__list-item">Svg</li>
+								<!--item-->
+								<li class="panel__item carousel__list-item">Interactive blocks</li>
+								<!--item-->
+								<li class="panel__item carousel__list-item">Use BEM</li>
+							</ul>
+						</div>
+						<!--help-->
+						<span class="carousel__help">Tap on image to see the project
+							<span class="carousel__help-arrow">&gt;</span>
+						</span>
+						<!--link-->
+						<a class="carousel__wrapper-img" href="../projects/repair-design-project/repair-design-project.html" target="_blank">
+							<img class="carousel__img" src="assets/img/repair.PNG" alt="project">
+						</a>
+					</section>
+				</div>
+				<!--buttons-->
+				<span class="carousel__button">&gt;</span>
+				<span class="carousel__button carousel__button_left">&gt;</span>
+			</div>
 		</div>
 	</div>
 </main>
