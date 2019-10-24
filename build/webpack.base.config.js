@@ -86,6 +86,7 @@ module.exports = {
 		}),
 		new CopyWebpackPlugin([
 			{from: `${PATHS.src}/${PATHS.assets}/img`, to: `${PATHS.assets}/img`},
+			{from: `${PATHS.src}/static`, to : `${PATHS.dist}/static`},
 		]),
 	],
 };
