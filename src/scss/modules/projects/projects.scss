@@ -1,0 +1,16 @@
+.projects {
+  margin: 100px 0 50px;
+  padding-top: 50px;
+  border-top: 5px solid $main-separator;
+
+  /*wrapper*/
+  &__wrapper {
+    display: flex;
+    flex-flow: column;
+  }
+
+  /*carousel*/
+  &__carousel {
+
+  }
+}

@@ -1,0 +1,116 @@
+.panel {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding: 1px;
+  background-color: $main-background;
+  box-shadow: 0 0 4px 0 $main-box-shadow;
+
+  /*title*/
+  &__title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #cda267;
+    transition: box-shadow $regular-time;
+
+    @media only screen and (min-width: $tablet-width) {
+      padding: 5px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 0 3px 0 #cda267;
+    }
+
+    &:active {
+      box-shadow: none;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    color: $accent-color;
+    font-family: HansKendrick, sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: .5px;
+
+    text-transform: uppercase;
+
+    @media only screen and (min-width: $small-tablet-width) {
+      font-size: 22px;
+      line-height: 24.6px;
+    }
+  }
+
+  /*icon*/
+  &__icon {
+    margin-right: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 25px;
+    color: $accent-color;
+    transform: rotate(90deg);
+    transition: transform $regular-time;
+  }
+
+  /*list*/
+  &__list {
+    display: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /*item*/
+  &__item {
+    margin-top: 10px;
+    padding: 0 5px 5px;
+    border-bottom: 1px solid $main-separator;
+  }
+
+  &__item-title {
+    margin: 0 0 5px;
+    font-family: $base-font;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: .5px;
+    color: white;
+
+    @media only screen and (min-width: $small-tablet-width) {
+      font-size: 19px;
+      line-height: 27px;
+    }
+  }
+
+  &__item-info {
+    font-family: $base-font;
+    color: white;
+    font-size: 14px;
+
+    @media only screen and (min-width: $small-tablet-width) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &_open {
+    padding: 0;
+
+    & .panel__title-wrapper {
+      border-bottom: 1px solid transparent;
+    }
+
+    & .panel__list {
+      display: block;
+    }
+
+    & .panel__icon {
+      transform: rotate(-90deg);
+    }
+  }
+}

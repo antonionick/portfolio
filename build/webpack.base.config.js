@@ -82,10 +82,11 @@ module.exports = {
 		}),
 		new HtmlWebpackPlugin({
 			template: `${PATHS.src}/index.html`,
-			filename: './index.html',
+			filename: './portfolio.html',
 		}),
 		new CopyWebpackPlugin([
 			{from: `${PATHS.src}/${PATHS.assets}/img`, to: `${PATHS.assets}/img`},
+			{from: `${PATHS.src}/static`, to : `${PATHS.dist}/static`},
 		]),
 	],
 };

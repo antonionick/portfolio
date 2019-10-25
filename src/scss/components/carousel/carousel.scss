@@ -1,0 +1,211 @@
+.carousel {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid $main-box-shadow;
+
+  /*wrapper*/
+  &__wrapper {
+    order: 2;
+    display: flex;
+    align-items: stretch;
+    overflow: visible;
+    max-width: 100%;
+    width: 100%;
+
+    @media only screen and (min-width: $tablet-width) {
+      max-width: calc(100% - 100px);
+    }
+  }
+
+  /*content*/
+  &__content {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex: 0 0 100%;
+    background-color: #363636;
+    transition: margin-left $regular-time;
+
+    @media only screen and (min-width: $tablet-width) {
+      justify-content: space-around;
+      height: 300px;
+    }
+
+    &::after {
+      content: 'swipe to see other';
+      align-self: center;
+      margin-top: 20px;
+      font-family: $base-font;
+      font-size: 15px;
+      color: $main-color;
+      text-transform: uppercase;
+
+      @media only screen and (min-width: $tablet-width) {
+        content: none;
+      }
+    }
+  }
+
+  /*title*/
+  &__title {
+    align-self: center;
+    margin: 10px 0 20px;
+    color: $accent-color;
+    text-transform: uppercase;
+
+    @media only screen and (min-width: $tablet-width) {
+      align-self: flex-start;
+      margin: 0;
+      padding-left: 10px;
+    }
+  }
+
+  /*description*/
+  &__description {
+    width: 100%;
+    padding: 0 0 1px 0;
+    background-color: transparent;
+    box-shadow: none;
+
+    @media only screen and (min-width: $tablet-width) {
+      width: 45%;
+      margin: 0;
+    }
+
+    &_open {
+      & .carousel__list {
+        visibility: visible;
+      }
+    }
+  }
+
+  /*show*/
+  &__show-wrapper {
+    padding: 0 5px;
+    border-bottom: 0;
+
+    @media only screen and (min-width: $tablet-width) {
+      padding: 0 0 0 10px;
+    }
+  }
+
+  &__show {
+    font-size: 16px;
+    color: $accent-color;
+
+    @media only screen and (min-width: $small-tablet-width) {
+      font-size: 17px;
+    }
+
+    @media only screen and (min-width: $tablet-width) {
+      font-size: 18px;
+    }
+  }
+
+  /*list*/
+  &__list {
+    display: block;
+    visibility: hidden;
+  }
+
+  &__list-item {
+    padding: 0 5px;
+    color: $main-color;
+
+    @media only screen and (min-width: $small-tablet-width) {
+      font-size: 17px;
+    }
+
+    @media only screen and (min-width: $tablet-width) {
+      padding: 0 10px;
+    }
+  }
+
+  /*help*/
+  &__help {
+    align-self: center;
+    display: flex;
+    margin: 20px 0 0;
+    font-family: $base-font;
+    font-size: 15px;
+    line-height: 17px;
+    color: $main-color;
+
+    @media only screen and (min-width: $tablet-width) {
+      align-items: center;
+      margin: 0;
+      font-size: 17px;
+    }
+  }
+
+  &__help-arrow {
+    display: block;
+    margin-left: 10px;
+    font-size: 18px;
+    transform: rotate(90deg);
+
+    @media only screen and (min-width: $tablet-width) {
+      padding-bottom: 6px;
+      font-size: 40px;
+      line-height: 30px;
+      transform: rotate(0);
+    }
+  }
+
+  /*wrapper-img*/
+  &__wrapper-img {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-top: 20px;
+    text-decoration: none;
+
+    @media only screen and (min-width: $tablet-width) {
+      max-width: 56%;
+      margin-top: 0;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+
+    @media only screen and (min-width: $tablet-width) {
+      height: 300px;
+    }
+  }
+
+  /*button*/
+  &__button {
+    display: none;
+    order: 3;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 50px;
+    color: white;
+    font-size: 30px;
+    background-color: $accent-color;
+    transition: box-shadow $regular-time;
+
+    @media only screen and (min-width: $tablet-width) {
+      display: flex;
+    }
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: -1px 0 5px rgba(227, 184, 115, .7);
+    }
+
+    &:active {
+      box-shadow: none;
+    }
+
+    &_left {
+      order: 1;
+      transform: rotate(180deg);
+    }
+  }
+}

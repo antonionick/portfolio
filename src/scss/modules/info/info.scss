@@ -1,0 +1,17 @@
+.info {
+  padding-top: 50px;
+  border-top: 5px solid $main-separator;
+
+  /*wrapper*/
+  &__wrapper {
+    display: flex;
+    flex-flow: column;
+  }
+
+  /*content*/
+  &__content {
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: none;
+  }
+}

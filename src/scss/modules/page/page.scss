@@ -1,9 +1,16 @@
-*  {
+div, section, article  {
   box-sizing: border-box;
   overflow: hidden;
 }
 
+body {
+  background: $main-background;
+}
+
 .page {
-  max-width: $max-width;
   margin: 0 auto;
+
+  @media only screen and (min-width: $max-width) {
+    max-width: $max-width;
+  }
 }
