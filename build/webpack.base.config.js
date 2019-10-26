@@ -15,6 +15,7 @@ module.exports = {
 	},
 	entry: {
 		portfolio: PATHS.src,
+		view: PATHS.src + '/view.js'
 	},
 	output: {
 		filename: `[name].js`,
@@ -83,6 +84,12 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: `${PATHS.src}/index.html`,
 			filename: './portfolio.html',
+			chunks: ['portfolio'],
+		}),
+		new HtmlWebpackPlugin({
+			template: `${PATHS.src}/view.html`,
+			filename: './view.html',
+			chunks: ['view'],
 		}),
 		new CopyWebpackPlugin([
 			{from: `${PATHS.src}/${PATHS.assets}/img`, to: `${PATHS.assets}/img`},
